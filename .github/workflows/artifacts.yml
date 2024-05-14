@@ -33,7 +33,8 @@ jobs:
         run: npm install
       - name: Build Web App
         run: npm run build
-      - uses: actions/upload-artifact@v4
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: lightroom-photo-gallery
-          path: build/
+          name: ${{ github.run_id }}
+          files: build/**/*
