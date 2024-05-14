@@ -14,8 +14,8 @@
     "yet-another-react-lightbox": "^3.18.0"
   },
   "scripts": {
-    "build:css": "postcss src/styles/index.css -o public/index.css",
-    "watch:css": "postcss src/styles/index.css -o public/index.css -w",
+    "build:css": "npx postcss src/styles/index.css -o public/index.css",
+    "watch:css": "npx postcss src/styles/index.css -o public/index.css -w",
     "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
