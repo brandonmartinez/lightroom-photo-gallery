@@ -11,4 +11,4 @@ echo "Updating Create React App"
 npm install react-scripts@latest
 
 echo "Creating environment file if it doesn't exist"
-[ ! -f .env ] && cp .envsample .env
+[ ! -f public/env.js ] && cp public/env.sample.js public/env.js

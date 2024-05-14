@@ -17,13 +17,13 @@ export default function PhotoGallery() {
 
   const images = [];
 
-  for (let i = 0; i < process.env.REACT_APP_IMAGE_COUNT; i++) {
-    const baseName = process.env.REACT_APP_IMAGE_PREFIX;
-    const extension = process.env.REACT_APP_IMAGE_EXTENSION;
-    const thumbnailSuffix = process.env.REACT_APP_IMAGE_THUMBNAIL_SUFFIX;
+  for (let i = 0; i < window._env_.IMAGE_COUNT; i++) {
+    const baseName = window._env_.IMAGE_PREFIX;
+    const extension = window._env_.IMAGE_EXTENSION;
+    const thumbnailSuffix = window._env_.IMAGE_THUMBNAIL_SUFFIX;
     const formattedImageNumber = (i + 1)
       .toString()
-      .padStart(process.env.REACT_APP_IMAGE_PAD, "0");
+      .padStart(window._env_.IMAGE_PAD, "0");
 
     const image = {
       full: `images/${baseName}-${formattedImageNumber}.${extension}`,
