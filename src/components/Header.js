@@ -1,6 +1,6 @@
 export default function Header() {
   const galleryName = process.env.REACT_APP_GALLERY_NAME;
-  const downloadUrl = process.env.REACT_APP_DOWNLOAD_ALL_FILENAME;
+  const downloadUrl = 'images/' + process.env.REACT_APP_DOWNLOAD_ALL_FILENAME;
   return (
     <div className="w-full prose max-w-none">
       <img src="logo.png" alt="logo" className="h-10" />
