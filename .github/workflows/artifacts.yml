@@ -1,10 +1,10 @@
-name: Create Lightroom Photo Gallery Artifacts
+name: Create Artifacts
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
