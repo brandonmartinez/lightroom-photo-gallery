@@ -2,6 +2,7 @@ import { useState } from "react";
 // https://yet-another-react-lightbox.com/documentation
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Download from "yet-another-react-lightbox/plugins/download";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 
@@ -42,7 +43,7 @@ export default function PhotoGallery() {
               <div class="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
-                  class="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
+                  class="block h-full w-full rounded-lg border-white border-4 object-cover object-center cursor-pointer transform transition duration-500 hover:scale-105 justify-center items-center"
                   src={image.thumbnail}
                   onClick={() => openSlide(index)}
                 />
@@ -56,8 +57,9 @@ export default function PhotoGallery() {
         open={open}
         close={() => setOpen(false)}
         index={slideIndex}
+        on={{ view: ({ index: currentIndex }) => setSlideIndex(currentIndex) }}
         slides={images}
-        plugins={[Thumbnails]}
+        plugins={[Thumbnails, Download]}
       />
     </>
   );

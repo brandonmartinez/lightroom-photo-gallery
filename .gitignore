@@ -25,4 +25,4 @@ yarn-error.log*
 # App Specific
 .env
 public/images/*
-src/index.css
+public/index.css
