@@ -37,4 +37,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: ${{ github.run_id }}
+          generate_release_notes: true
+          body: ${{ github.event.head_commit.message }}
+          tag_name: latest
           files: build/**/*
