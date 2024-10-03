@@ -18,6 +18,7 @@
     "watch:css": "npx postcss src/styles/index.css -o public/index.css -w",
     "start": "npm run watch:css & react-scripts start",
     "build": "npm run build:css && react-scripts build",
+    "rmimg": "rm -rf public/images/*{.jpg,.zip}",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

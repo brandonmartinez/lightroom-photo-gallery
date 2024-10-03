@@ -27,3 +27,4 @@ yarn-error.log*
 public/env.js
 public/images/*
 public/index.css
+temp/
