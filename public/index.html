@@ -10,7 +10,17 @@
     />
     <link rel="stylesheet" href="index.css" />
     <title>%REACT_APP_GALLERY_NAME%</title>
-    <script src="env.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window._env_ = {
+        DOWNLOAD_ALL_FILENAME: "%REACT_APP_DOWNLOAD_ALL_FILENAME%",
+        GALLERY_NAME: "%REACT_APP_GALLERY_NAME%",
+        IMAGE_COUNT: %REACT_APP_IMAGE_COUNT%,
+        IMAGE_EXTENSION: "%REACT_APP_IMAGE_EXTENSION%",
+        IMAGE_PAD: %REACT_APP_IMAGE_PAD%,
+        IMAGE_PREFIX: "%REACT_APP_IMAGE_PREFIX%",
+        IMAGE_THUMBNAIL_SUFFIX: "%REACT_APP_IMAGE_THUMBNAIL_SUFFIX%",
+      };
+    </script>
   </head>
   <body class="bg-slate-200">
     <noscript>You need to enable JavaScript to run this app.</noscript>
