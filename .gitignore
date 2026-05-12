@@ -10,6 +10,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -26,5 +27,7 @@ yarn-error.log*
 .env
 public/env.js
 public/images/*
+!public/images/.gitkeep
+public/images.json
 public/index.css
 temp/
