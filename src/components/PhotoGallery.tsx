@@ -13,7 +13,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 // Build-time import of the manifest produced by `scripts/generate-manifest.mjs`.
 // Baked into the JS bundle — no runtime fetch.
-import manifest from "../../public/images.json";
+import manifest from "../images.json";
 import type {
   GalleryImage,
   GalleryManifest,

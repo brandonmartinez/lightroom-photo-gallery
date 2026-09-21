@@ -52,7 +52,7 @@ npm install
 npm run dev                # http://localhost:5173, manifest regenerated on start
 ```
 
-The `predev` / `prebuild` hooks regenerate `public/images.json` automatically.
+The `predev` / `prebuild` hooks regenerate `src/images.json` automatically.
 You can also regenerate manually with `npm run manifest`.
 
 ## Build
@@ -104,13 +104,13 @@ src/
   components/
     Header.tsx              # title + dark mode toggle
     PhotoGallery.tsx        # grid + lightbox; imports images.json at build time
+  images.json               # generated manifest (gitignored)
   styles/index.css          # Tailwind v4 entry
   types.ts                  # GalleryImage / GalleryManifest types
 scripts/
-  generate-manifest.mjs     # scans public/images/, writes public/images.json
+  generate-manifest.mjs     # scans public/images/, writes src/images.json
 public/
   images/                   # photos (gitignored; only .gitkeep is tracked)
-  images.json               # generated manifest (gitignored)
   logo.png
   robots.txt
 ```

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Scans public/images/ and writes public/images.json — a manifest of
+ * Scans public/images/ and writes src/images.json — a manifest of
  * { full, thumbnail, width, height, caption, capturedAt } entries used by the
  * gallery. EXIF metadata is read via the `exifr` package when available; if
  * the dependency isn't installed yet, the manifest is still written with
@@ -25,7 +25,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 const imagesDir = path.join(projectRoot, "public", "images");
-const manifestPath = path.join(projectRoot, "public", "images.json");
+const manifestPath = path.join(projectRoot, "src", "images.json");
 
 const SUPPORTED_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const THUMB_SUFFIX = (process.env.VITE_THUMBNAIL_SUFFIX || "thumb").replace(

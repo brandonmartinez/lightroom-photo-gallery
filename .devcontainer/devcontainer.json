@@ -1,6 +1,10 @@
 {
 	"name": "Node.js",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+	"mounts": [
+		"source=${localEnv:HOME}/.npmrc,target=/home/node/.npmrc,type=bind,readonly",
+		"source=${localEnv:HOME}/.gitconfig,target=/home/node/.gitconfig,type=bind,readonly"
+	],
 	"postCreateCommand": "bash -i ./.devcontainer/postcreate.sh",
 	"forwardPorts": [
 		3000
